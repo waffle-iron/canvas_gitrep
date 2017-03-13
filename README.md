@@ -14,7 +14,6 @@ Tangram é um antigo jogo chinês, que consiste na formação de figuras e desen
 - Caso esteja perdido haverá uma opção para resetar o tangram para as posições iniciais dos elementos;
 - A tela possuirá um cronometro para contar o tempo gasto pelo usuário para realizar o Tangram, este elemento poderá ser minimizado caso o usuário preferir;
 - Ao completar o tangram o usuário poderá ver qual foi seu desempenho;
-- 
 ### Equipe
 - Jacson Rafael dos Santos Pessoa 
 - Johny Klein 
