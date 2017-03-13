@@ -18,6 +18,19 @@
 		var context=canvas.getContext("2d");
 		context.fillStyle="#FF6565";
 		context.fillRect();
+		
+		// Codigo responsavel pela captura das coordenadas no mouse(acertado para resolução do canvas!!!).
+		// Codigo em fase de teste!!!
+		var x, y;
+		
+		document.getElementById("myCanvas").addEventListener('mousemove',function(event){
+			x = event.pageX;
+			x-=201;
+			y = event.pageY;
+			y-=59;
+			
+			
+		})
 		</script>
 		</canvas>
 	</div>
