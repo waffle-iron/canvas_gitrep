@@ -1,0 +1,10 @@
+var x, y;
+		
+		document.getElementById("myCanvas").addEventListener('mousemove',function(event){
+			x = event.pageX;
+			x-=201;
+			y = event.pageY;
+			y-=59;
+			
+			
+		})
