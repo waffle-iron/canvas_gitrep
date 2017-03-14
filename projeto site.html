@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+<title>Projeto jogo</title>
+<link rel="stylesheet" type="text/css" href="estiloJogo.css">
+</head>
+<body>
+<div id="corpoSite">
+<center>
+	<div id="cabecalho">
+		<header>
+		<h1>Projeto em aula - Poligonos</h1>
+		</header>
+	</div>
+	<div id="espacoJogo">
+		<canvas id="myCanvas" width="1000" height="500">
+		<script> 
+		var canvas=document.getElementById("myCanvas");
+		var ctx=canvas.getContext("2d");
+		ctx.fillStyle="#FF6565";
+		
+		
+		var x, y;
+		
+		document.getElementById("myCanvas").addEventListener('mousemove',function(event){
+			x = event.pageX;
+			//x-=201;
+			y = event.pageY;
+			y-=99;
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			drawTriangle(x,y);
+			console.log("x: " + x + ", y: " + y);
+			
+		});
+		
+		function drawTriangle(x, y) {
+			
+			ctx.beginPath();
+			var mtX = x;
+			var ltX = 25 + x;
+			var mtY = 50 + y;
+			var ltY = 75 + y;
+			var ltY2 = 25 + y;
+			
+
+			ctx.moveTo(mtX,mtY);
+			ctx.lineTo(ltX,ltY);
+			ctx.lineTo(ltX,ltY2);
+			ctx.fill();
+			ctx.fillStyle="#ffffff";
+		}
+		
+		
+		
+		
+		</script>
+		</canvas>
+	</div>
+	<div id="rodape">
+		<footer>
+			<p> Equipe: Lucas Jorge Hubert // Patrik Reisner // Jacson Rafael dos Santos Pessoa // Johny Klein // Matheus de Quadros</p>
+		</footer>
+	</div>
+	</center>
+</div>
+
+</body>
+</html>
