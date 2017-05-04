@@ -19,27 +19,26 @@ function preload(){
 function create(){    
     
     for (var i = 0; i < figuras.length; i++){ 
-
-     //figura encaixe
+      
+        //Cria molde do tangran
         game.physics.startSystem(Phaser.Physics.ARCADE);
         figuras[i] = game.add.sprite(game.world.centerX, game.world.height, nomesFiguras[i]);
         figuras[i].anchor.setTo(anchorsetTo1[i], anchorsetTo2[i]); //Disposição figuraEncaixe
         game.physics.arcade.enable(figuras[i]);
         figuras[i].tint= 0x00beff; //Cor figuraEncaixe
 
-        //figura a encaixar  
+        //Cria as peças do jogo
         figurasCopy[i] = game.add.sprite(game.world.centerX, dimensaoSprite[i], figuras[i].key, figuras[i].frame); //DimensãoSprite
         figurasCopy[i].anchor.x = anchorX[i]; //Eixo x figuraAEncaixar
         game.physics.arcade.enable(figurasCopy[i]);
         figurasCopy[i].inputEnabled = true;
         figurasCopy[i].input.enableDrag();
         figurasCopy[i].originalPosition = figurasCopy[i].position.clone();
+
         figurasCopy[i].events.onDragStop.add(function(currentSprite){
-          stopDrag(currentSprite, figuras[i]);
+          stopDrag(currentSprite, figuras[nomesFiguras.indexOf(currentSprite.key)]);
         }, this);  
-        
     }
-    
   }
   
 function stopDrag(currentSprite, endSprite){
