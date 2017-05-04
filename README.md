@@ -1,5 +1,5 @@
 # canvas_gitrep
-# LINK DO PROJETO NA WEB: https://patrikfreisner.github.io/canvas_gitrep/
+
 
 ### O projeto
 
@@ -21,3 +21,4 @@ Tangram é um antigo jogo chinês, que consiste na formação de figuras e desen
 - Lucas Jorge Hubert;
 - Matheus de Quadros;
 - Patrik Reisner.
+## LINK DO PROJETO NA WEB: https://patrikfreisner.github.io/canvas_gitrep/
