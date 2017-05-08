@@ -17,16 +17,16 @@ function preload(){
 }
     
 function create(){    
-    
-    for (var i = 0; i < figuras.length; i++){ 
-      
+    for (var j = 0; j < figuras.length; j++){
         //Cria molde do tangran
         game.physics.startSystem(Phaser.Physics.ARCADE);
-        figuras[i] = game.add.sprite(game.world.centerX, game.world.height, nomesFiguras[i]);
-        figuras[i].anchor.setTo(anchorsetTo1[i], anchorsetTo2[i]); //Disposição figuraEncaixe
-        game.physics.arcade.enable(figuras[i]);
-        figuras[i].tint= 0x00beff; //Cor figuraEncaixe
-
+        figuras[j] = game.add.sprite(game.world.centerX, game.world.height, nomesFiguras[j]);
+        figuras[j].anchor.setTo(anchorsetTo1[j], anchorsetTo2[j]); //Disposição figuraEncaixe
+        game.physics.arcade.enable(figuras[j]);
+        figuras[j].tint= 0x00beff; //Cor figuraEncaixe
+    }
+    
+    for (var i = 0; i < figuras.length; i++){ 
         //Cria as peças do jogo
         figurasCopy[i] = game.add.sprite(game.world.centerX, dimensaoSprite[i], figuras[i].key, figuras[i].frame); //DimensãoSprite
         figurasCopy[i].anchor.x = anchorX[i]; //Eixo x figuraAEncaixar
@@ -39,15 +39,21 @@ function create(){
           stopDrag(currentSprite, figuras[nomesFiguras.indexOf(currentSprite.key)]);
         }, this);  
     }
-  }
+    }
+  
   
 function stopDrag(currentSprite, endSprite){
     if (!game.physics.arcade.overlap(currentSprite, endSprite, function() {
-    currentSprite.input.draggable = false;
-    currentSprite.position.copyFrom(endSprite.position); 
-    currentSprite.anchor.setTo(endSprite.anchor.x, endSprite.anchor.y); 
-  })) { currentSprite.position.copyFrom(currentSprite.originalPosition);
+        // Codigo responsavel pelo reposicionamento das peças.
+    //currentSprite.input.draggable = false;
+    //currentSprite.position.copyFrom(endSprite.position); 
+    //currentSprite.anchor.setTo(endSprite.anchor.x, endSprite.anchor.y); 
+  })) 
+  { 
+      //currentSprite.position.copyFrom(currentSprite.originalPosition);
   }
+  }
+<<<<<<< HEAD
 }
 
 
@@ -61,3 +67,5 @@ function stopDrag(currentSprite, endSprite){
     document.querySelector('.teste').innerHTML = '<p>'+tempo+'</p>';
   }, 1000);
 })();
+=======
+>>>>>>> e56f2101c9f711fd87bebc92296e41bf3b89d150
