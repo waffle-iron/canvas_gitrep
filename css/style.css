@@ -8,8 +8,6 @@
 
 #tangram {
 	background-color: white;
-	width: 100%;
-	height : 99%;
 	margin-bottom: -17px;
 }
 
@@ -62,4 +60,17 @@ li{
 	width: 100%;
 	height: 50px;
 	float: left;
+}
+
+.teste{
+	width: 84px;
+    height: 50px;
+	background-color: white;
+	position: fixed;
+    left: 94%;
+    top: 30px;
+	border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+	padding-left: 18px;
+
 }

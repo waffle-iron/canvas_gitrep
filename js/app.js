@@ -48,4 +48,16 @@ function stopDrag(currentSprite, endSprite){
     currentSprite.anchor.setTo(endSprite.anchor.x, endSprite.anchor.y); 
   })) { currentSprite.position.copyFrom(currentSprite.originalPosition);
   }
-  }
+}
+
+
+(function timer(){
+  var start = new Date();
+  start.setHours(0,0,0,0);
+  var tempo;
+  var interval = setInterval(function(){
+    tempo = (start.getMinutes()<10?'0':'') + start.getMinutes() +" : "+ (start.getSeconds()<10?'0':'') + start.getSeconds();
+    start.setSeconds(start.getSeconds() + 1);
+    document.querySelector('.teste').innerHTML = '<p>'+tempo+'</p>';
+  }, 1000);
+})();
