@@ -39,7 +39,7 @@ function create(){
           stopDrag(currentSprite, figuras[nomesFiguras.indexOf(currentSprite.key)]);
         }, this);  
     }
-    }
+}
   
   
 function stopDrag(currentSprite, endSprite){
@@ -53,9 +53,6 @@ function stopDrag(currentSprite, endSprite){
       //currentSprite.position.copyFrom(currentSprite.originalPosition);
   }
   }
-<<<<<<< HEAD
-}
-
 
 (function timer(){
   var start = new Date();
@@ -67,5 +64,4 @@ function stopDrag(currentSprite, endSprite){
     document.querySelector('.teste').innerHTML = '<p>'+tempo+'</p>';
   }, 1000);
 })();
-=======
->>>>>>> e56f2101c9f711fd87bebc92296e41bf3b89d150
+
