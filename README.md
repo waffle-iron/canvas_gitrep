@@ -20,8 +20,8 @@ Tangram é um antigo jogo chinês, que consiste na formação de figuras e desen
 - Uma figura tangram que deverá ser completada.
 - Sprites para Completar uma Forma e Sprites que desenham a Forma Modelo.
 - Um recurso Snap (a cada movimeto do Sprite ele se ajusta ao Fundo).
-- Tempo de jogo será calculado
-- Após completar figura, mensagem de vitória e tempo
+- Tempo de jogo será calculado.
+- Após completar figura, mensagem de vitória e tempo.
 
 ### Equipe
 - Jacson Rafael dos Santos Pessoa;
