@@ -3,12 +3,17 @@
 	padding: 0px;
 	background-color: #F5F5F5;
 	font-family: 'Roboto', sans-serif;
-
 }
 
 #tangram {
 	background-color: white;
 	margin-bottom: -17px;
+	min-height: 95%;
+	height: 95%;
+}
+
+.loader-gif {
+  background: rgba(255, 255, 255, .5) url(/img/loading.gif) 50% 50% no-repeat;
 }
 
 footer{
