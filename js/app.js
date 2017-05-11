@@ -2,8 +2,8 @@
 
 var anchorsetTo1 = [1.6, 0.6, 0.8, 1, 0, 0.3, -0.7];//Eixo x figuraEncaixe
 var anchorsetTo2 = [4, 4, 3.5, 2, 1.4, 1.3, 1.6];//Eixo y figuraEncaixe
-var anchorX = [7, 7, 3.6, 5, 3.5, 2.6, 2.6]; //Eixo x figuraAEncaixar
-var dimensaoSprite = [20, 100, 230, 340, 460, 585, 0]; //Eixo y figuraAEncaixar
+var anchorX = [-7.6, 7, -3.6, 5, -3.5, 2.6, 2.6]; //Eixo x figuraAEncaixar
+var dimensaoSprite = [20, 150, 230, 310, 370, 455, 10]; //Eixo y figuraAEncaixar
 
 var tangran, interval, tempo, diferencaX, diferencaY, margemDeErroEncaixe = 5;
 
