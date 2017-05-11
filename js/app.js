@@ -1,9 +1,9 @@
 'use strict'
 
-var anchorsetTo1 = [1.594, 0.615, 0.8, 1, 0, 0.288, -0.705];//Eixo x figuraEncaixe
-var anchorsetTo2 = [4.028, 4.028, 3.514, 1.98, 1.4, 1.29, 1.58];//Eixo y figuraEncaixe
-var anchorX = [7, 7, 3.6, 5, 3.5, 2.6, 2.6]; //Eixo x figuraAEncaixar
-var dimensaoSprite = [20, 100, 230, 340, 460, 485, 0]; //Eixo y figuraAEncaixar
+var anchorsetTo1 = [1.6, 0.6, 0.8, 1, 0, 0.3, -0.7];//Eixo x figuraEncaixe
+var anchorsetTo2 = [4, 4, 3.5, 2, 1.4, 1.3, 1.6];//Eixo y figuraEncaixe
+var anchorX = [-7.6, 7, -3.6, 5, -3.5, 2.6, 2.6]; //Eixo x figuraAEncaixar
+var dimensaoSprite = [20, 140, 200, 290, 340, 440, 10]; //Eixo y figuraAEncaixar
 
 var tangran, interval, tempo, diferencaX, diferencaY, margemDeErroEncaixe = 5;
 
@@ -79,7 +79,9 @@ function stopDrag(currentSprite, endSprite, itemTangramIndex) {
 	} else {
 		tangran[itemTangramIndex].status = true;
 		if (win()) {
-			alert("Você ganhou!\n Tempo:" + tempo);
+
+			document.getElementsByClassName("win-wrapper")[0].classList.remove("hide-element");
+			document.getElementById("timer").innerHTML(tempo);
 		}
 	}
 }
@@ -126,3 +128,5 @@ function reset() {
 	//setTangran();
 };
 
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security 

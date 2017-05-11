@@ -113,6 +113,74 @@ li{
   -webkit-font-smoothing: antialiased;
 }
 
+.win-wrapper{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+}
+
+#you-win{
+	border-radius: 5px;
+	padding-top: 30px;
+	text-align: center;
+    width: 400px;
+    height: 205px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#you-win i{
+	font-size: 100px;
+	float: left;
+}
+
+#you-win button i{
+	font-size: 30px;
+  height: auto;
+  margin: 0;
+}
+
+#you-win .first{
+	margin-left: 50px
+}
+
+#you-win .middle{
+	margin-top: -20px
+}
+
+.hide-element{
+	display: none;
+}
+
+button{
+	  color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+	  display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
 /* fallback */
 @font-face {
   font-family: 'Material Icons';
