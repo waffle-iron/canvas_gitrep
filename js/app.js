@@ -84,9 +84,7 @@ function stopDrag(currentSprite, endSprite, itemTangramIndex) {
 	} else {
 		tangran[itemTangramIndex].status = true;
 		if (win()) {
-
-			document.getElementsByClassName("win-wrapper")[0].classList.remove("hide-element");
-			document.getElementById("timer").innerHTML(tempo);
+            alert("Você ganhou!\n Tempo:" + tempo);
 		}
 	}
 }
@@ -132,6 +130,3 @@ function reset() {
 	timer();
 	//setTangran();
 };
-
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security 
