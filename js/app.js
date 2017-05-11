@@ -79,7 +79,9 @@ function stopDrag(currentSprite, endSprite, itemTangramIndex) {
 	} else {
 		tangran[itemTangramIndex].status = true;
 		if (win()) {
-			alert("Você ganhou!\n Tempo:" + tempo);
+
+			document.getElementsByClassName("win-wrapper")[0].classList.remove("hide-element");
+			document.getElementById("timer").innerHTML(tempo);
 		}
 	}
 }
