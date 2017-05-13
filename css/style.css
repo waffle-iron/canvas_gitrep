@@ -61,6 +61,10 @@ li{
 	overflow: hidden;
 }
 
+.repository img{
+	width:78px;
+}
+
 .copyright{
 	width: 100%;
 	height: 50px;
@@ -69,32 +73,32 @@ li{
 
 .teste{
 	width: 84px;
-    height: 50px;
+  height: 50px;
 	background-color: white;
 	position: fixed;
-    left: 94%;
-    top: 30px;
+  left: 94%;
+  top: 30px;
 	border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
 	padding-left: 18px;
 }
 
 .button-refresh{
 	width: 84px;
-    height: 50px;
+  height: 50px;
 	background-color: white;
 	position: fixed;
-    left: 94%;
-    top: 90px;
+  left: 94%;
+  top: 90px;
 	border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
 	padding-left: 18px;
 }
 
 .button-refresh > i{
 	margin-top: 7px;
-    margin-left: 8px;
-    font-size: 35px;
+  margin-left: 8px;
+  font-size: 35px;
 }
 
 .material-icons {
@@ -134,9 +138,14 @@ li{
     transform: translate(-50%, -50%);
 }
 
+.you-win-enabled{
+     transition: opacity 0.4s ease-out;
+}
+
 #you-win i{
 	font-size: 100px;
 	float: left;
+	color:  #eaeaea;
 }
 
 #you-win button i{
@@ -151,6 +160,21 @@ li{
 
 #you-win .middle{
 	margin-top: -20px
+}
+
+.star-wrapper{
+        width: 100%;
+    display: inline-block;
+}
+
+.halfStar{
+    background: linear-gradient(to right, yellow 0%, yellow 50%,  #eaeaea 50%);
+		 -webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+}
+
+.fullStar{
+		color: yellow;
 }
 
 .hide-element{
@@ -181,6 +205,7 @@ button{
     border: 1px solid transparent;
     border-radius: 4px;
 }
+
 /* fallback */
 @font-face {
   font-family: 'Material Icons';

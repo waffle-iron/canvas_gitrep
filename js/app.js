@@ -1,8 +1,8 @@
-'use strict'
+'use strict';
 
 var anchorsetTo1 = [1.6, 0.6, 0.8, 1, 0, 0.3, -0.7];//Eixo x figuraEncaixe
 var anchorsetTo2 = [4, 4, 3.5, 2, 1.4, 1.3, 1.6];//Eixo y figuraEncaixe
-var anchorX = [7, 7, 3.6, 5, 3.5, 2.6, 2.6]; //Eixo x figuraAEncaixar
+var anchorX = [-7.6, 7, -3.6, 5, -3.5, 2.6, 2.6]; //Eixo x figuraAEncaixar
 var dimensaoSprite = [20, 100, 230, 340, 460, 585, 0]; //Eixo y figuraAEncaixar
 
 var tangran, interval, tempo, diferencaX, diferencaY, margemDeErroEncaixe = 5;
@@ -45,10 +45,13 @@ function create() {
 		item.object.anchor.setTo(anchorsetTo1[i], anchorsetTo2[i]); //Disposição figuraEncaixe
 		game.physics.arcade.enable(item.object);
 		item.object.tint = 0x00beff; //Cor figuraEncaixe
+
 	});
 
 	tangran.forEach(function (item, i) {
+
 		item.objectForm = game.add.sprite(game.world.centerX, dimensaoSprite[i], item.object.key, item.object.frame); //DimensãoSprite
+
 		item.objectForm.anchor.x = anchorX[i]; //Eixo x figuraAEncaixar
 		game.physics.arcade.enable(item.objectForm);
 		item.objectForm.inputEnabled = true;
@@ -58,6 +61,13 @@ function create() {
 		item.objectForm.events.onDragStop.add(function (currentSprite) {
 			var currentItem = tangran.filter(function (element) { return element.figureName === currentSprite.key }).shift();
 			stopDrag(currentSprite, currentItem.object, tangran.indexOf(currentItem));
+		}, this);
+		item.objectForm.events.onInputDown.add(function (currentSprite, pointer) {
+			if (!currentSprite.body.isMoving && pointer.middleButton.isDown) {
+				currentSprite.anchor.setTo(0.5, 0.5);
+				currentSprite.angle += 45;
+			}
+
 		}, this);
 	});
 
@@ -74,14 +84,16 @@ function win() {
 }
 
 function stopDrag(currentSprite, endSprite, itemTangramIndex) {
-	if (!slapItem(currentSprite, endSprite)){
+	if (!slapItem(currentSprite, endSprite)) {
 		tangran[itemTangramIndex].status = false;
 	} else {
 		tangran[itemTangramIndex].status = true;
 		if (win()) {
 
 			document.getElementsByClassName("win-wrapper")[0].classList.remove("hide-element");
-			document.getElementById("timer").innerHTML(tempo);
+			document.getElementById('you-win').classList.add("you-win-enable");
+			document.getElementById("timer").innerText = "Tempo: " + tempo;
+			clearInterval(interval);
 		}
 	}
 }
