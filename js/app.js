@@ -1,9 +1,9 @@
 'use strict';
 
-var anchorsetTo1 = [1.6, 0.6, 0.8, 1, 0, 0.3, -0.7];//Eixo x figuraEncaixe
-var anchorsetTo2 = [4, 4, 3.5, 2, 1.4, 1.3, 1.6];//Eixo y figuraEncaixe
-var anchorX = [-7.6, 7, -3.6, 5, -3.5, 2.6, 2.6]; //Eixo x figuraAEncaixar
-var dimensaoSprite = [20, 100, 230, 340, 460, 585, 0]; //Eixo y figuraAEncaixar
+var anchorsetTo1 = [3.15, 2.15, 1.57, 2.02, 0.72, 0.8, -0.19];//Eixo x figuraEncaixe
+var anchorsetTo2 = [4.31, 4.31, 3.8, 2.22, 1.57, 1.53, 2.05];//Eixo y figuraEncaixe
+var anchorX = [-6.2, 8, -2.9, 5.5, -3, 2.76, 2.9]; //Eixo x figuraAEncaixar
+var dimensaoSprite = [38, 175, 200, 290, 357, 437, 35]; //Eixo y figuraAEncaixar
 
 var tangran, interval, tempo, diferencaX, diferencaY, margemDeErroEncaixe = 5;
 
