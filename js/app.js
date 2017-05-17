@@ -1,6 +1,6 @@
 'use strict';
 
-var anchorsetTo1 = [1.594, 0.615, 0.8, 1, 0, 0.288, -0.705];//Eixo x figuraEncaixe
+var anchorsetTo1 = [1.585, 0.615, 0.8, 1, 0, 0.288, -0.705];//Eixo x figuraEncaixe
 var anchorsetTo2 = [4.028, 4.028, 3.514, 1.98, 1.4, 1.29, 1.58];//Eixo y figuraEncaixe
 var anchorX = [7, 7, 3.6, 5, 3.5, 2.6, 2.6]; //Eixo x figuraAEncaixar
 var dimensaoSprite = [20, 100, 230, 340, 460, 485, 0]; //Eixo y figuraAEncaixar
